@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<mujoco model="ring">
+    <compiler angle="radian" coordinate="local"/>
+    <option timestep="0.002" iterations="100" integrator="Euler" cone="pyramidal" jacobian="dense" solver="Newton">
+        <flag sensornoise="enable"/>
+    </option>
+    <size nconmax="-1" njmax="-1" nuserdata="100"/>
+    <asset>
+        <mesh name="mesh_Plate" file="mesh_stl/Plate.stl"/>
+        <mesh name="mesh_Pole1" file="mesh_stl/Pole1.stl"/>
+        <mesh name="mesh_Pole2" file="mesh_stl/Pole2.stl"/>
+        <mesh name="mesh_Pole3" file="mesh_stl/Pole3.stl"/>
+        <mesh name="mesh_Pole4" file="mesh_stl/Pole4.stl"/>
+        <mesh name="mesh_Wire.001" file="mesh_stl/Wire.001.stl"/>
+        <mesh name="mesh_Wire.002" file="mesh_stl/Wire.002.stl"/>
+        <mesh name="mesh_Wire.000" file="mesh_stl/Wire.000.stl"/>
+        <mesh name="mesh_Wire.003" file="mesh_stl/Wire.003.stl"/>
+        <mesh name="mesh_Wire.004" file="mesh_stl/Wire.004.stl"/>
+        <mesh name="mesh_Wire.005" file="mesh_stl/Wire.005.stl"/>
+        <mesh name="mesh_Wire.006" file="mesh_stl/Wire.006.stl"/>
+        <mesh name="mesh_Wire.007" file="mesh_stl/Wire.007.stl"/>
+        <mesh name="mesh_Wire.008" file="mesh_stl/Wire.008.stl"/>
+        <mesh name="mesh_Wire.010" file="mesh_stl/Wire.010.stl"/>
+        <mesh name="mesh_Wire.011" file="mesh_stl/Wire.011.stl"/>
+        <mesh name="mesh_Wire.009" file="mesh_stl/Wire.009.stl"/>
+        <mesh name="mesh_Wire.012" file="mesh_stl/Wire.012.stl"/>
+    </asset>
+    <worldbody>
+        <body name="Plate" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+            <geom name="Plate" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Plate"/>
+            <body name="Pole1" pos="7.0 7.0 3.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="Pole1" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Pole1"/>
+            </body>
+            <body name="Pole2" pos="-7.0 7.0 3.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="Pole2" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Pole2"/>
+            </body>
+            <body name="Pole3" pos="-7.0 -7.0 3.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="Pole3" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Pole3"/>
+            </body>
+            <body name="Pole4" pos="7.0 -7.0 3.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="Pole4" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Pole4"/>
+            </body>
+            <body name="WirePath.001" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="WirePath.001" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.001"/>
+            </body>
+            <body name="WirePath.002" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="WirePath.002" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.002"/>
+            </body>
+            <body name="WirePath.000" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="WirePath.000" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.000"/>
+            </body>
+            <body name="WirePath.003" pos="0.0 0.0 0.0" quat="0.7071068286895752 0.0 0.0 -0.7071067094802856">
+                <geom name="WirePath.003" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.003"/>
+            </body>
+            <body name="WirePath.004" pos="0.0 0.0 0.0" quat="0.7071068286895752 0.0 0.0 -0.7071067094802856">
+                <geom name="WirePath.004" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.004"/>
+            </body>
+            <body name="WirePath.005" pos="0.0 0.0 0.0" quat="0.7071068286895752 0.0 0.0 -0.7071067094802856">
+                <geom name="WirePath.005" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.005"/>
+            </body>
+            <body name="WirePath.006" pos="14.0 0.0 0.0" quat="0.7071068286895752 0.0 0.0 -0.7071067094802856">
+                <geom name="WirePath.006" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.006"/>
+            </body>
+            <body name="WirePath.007" pos="14.0 0.0 0.0" quat="0.7071068286895752 0.0 0.0 -0.7071067094802856">
+                <geom name="WirePath.007" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.007"/>
+            </body>
+            <body name="WirePath.008" pos="14.0 0.0 0.0" quat="0.7071068286895752 0.0 0.0 -0.7071067094802856">
+                <geom name="WirePath.008" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.008"/>
+            </body>
+            <body name="WirePath.010" pos="0.0 14.0 0.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="WirePath.010" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.010"/>
+            </body>
+            <body name="WirePath.011" pos="0.0 14.0 0.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="WirePath.011" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.011"/>
+            </body>
+            <body name="WirePath.009" pos="14.0 0.0 0.0" quat="0.7071068286895752 0.0 0.0 -0.7071067094802856">
+                <geom name="WirePath.009" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.009"/>
+            </body>
+            <body name="WirePath.012" pos="0.0 14.0 0.0" quat="1.0 0.0 0.0 0.0">
+                <geom name="WirePath.012" type="mesh" pos="0 0 0" quat="1 0 0 0" rgba="1.0 1.0 1.0 1.0" mass="1.0" contype="1" conaffinity="1" mesh="mesh_Wire.012"/>
+            </body>
+        </body>
+        <light directional="true" cutoff="4" exponent="20" diffuse="1 1 1" specular="0 0 0" pos="0.9 0.3 2.5" dir="-0.9 -0.3 -2.5"/>
+    </worldbody>
+    <actuator/>
+    <equality/>
+    <sensor/>
+</mujoco>
