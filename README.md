@@ -5,7 +5,6 @@
 2.  git clone https://github.com/Farama-Foundation/gym-examples
     cd gym-examples
     <!-- python -m venv .env -->
-    source .env/bin/activate 
     <!-- if you use miniconda, you should replace bin by Sripts -->
     pip install -e .
 3.  before doing pip install -e . ,
